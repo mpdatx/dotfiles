@@ -22,3 +22,5 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 export PYTHONSTARTUP=$HOME/.pythonrc.py
+ alias edit="docker run -ti --rm -v $(pwd):/home/developer/workspace jare/vim-bundle"
+ 
