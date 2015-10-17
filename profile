@@ -46,5 +46,6 @@ else
     fi
 fi
 
-alias moredots='git -C ~/dotfiles pull origin master'
-alias pushdots='git -C ~/dotfiles commit -a -m "autocommit"'
+alias pull-dots='git -C ~/dotfiles pull origin master'
+alias push-dots='git -C ~/dotfiles commit -a -m "autocommit"'
+alias dots='pull-dots; push-dots'
