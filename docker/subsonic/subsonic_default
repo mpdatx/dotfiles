@@ -1,0 +1,2 @@
+SUBSONIC_ARGS="--max-memory=150 --port=80"
+SUBSONIC_USER="root"

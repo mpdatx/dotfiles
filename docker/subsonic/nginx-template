@@ -1,0 +1,11 @@
+{{ range $key, $value := .}}
+    {{ with $address := first $value.Addresses }}
+server {
+    listen {{ $address.Port }};
+    location / {
+        proxy_pass  http://{{ $address.IP }}:{{ $address.Port }};
+        include /etc/nginx/proxy_params;
+    }
+}
+    {{ end }}
+{{ end }}
