@@ -52,4 +52,4 @@ alias dots='pull-dots; push-dots; source ~/.profile'
 alias vim-bundle="docker run -ti --rm -v $(pwd):/home/developer/workspace jare/vim-bundle"
 alias lazygit="git add .; git commit -a -m 'lazygit'; git push;"
 
-source ~/dotfiles/gitprompt_jondavidjohn
+source ~/dotfiles/git_prompt
