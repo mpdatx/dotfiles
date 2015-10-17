@@ -3,3 +3,5 @@
 [user]
 	email = mpdatx@gmail.com
 	name = Matthew Daniels
+[push]
+    default = simple
