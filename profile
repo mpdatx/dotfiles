@@ -45,3 +45,6 @@ else
         $MOTD
     fi
 fi
+
+alias moredots='git -C ~/dotfiles pull origin master'
+alias pushdots='git -C ~/dotfiles commit -a -m "autocommit"'
