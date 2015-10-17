@@ -50,3 +50,4 @@ alias pull-dots='git -C ~/dotfiles pull origin master'
 alias push-dots='git -C ~/dotfiles commit -a -m "autocommit"'
 alias dots='pull-dots; push-dots; source ~/.profile'
 alias vim-bundle="docker run -ti --rm -v $(pwd):/home/developer/workspace jare/vim-bundle"
+alias lazygit="git add .; git commit -a -m 'lazygit'; git push;"
