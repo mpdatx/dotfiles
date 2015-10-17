@@ -53,4 +53,4 @@ alias vim-bundle="docker run -ti --rm -v $(pwd):/home/developer/workspace jare/v
 alias lazygit="git add .; git commit -a -m 'lazygit'; git push;"
 
 source ~/dotfiles/git_prompt
-source ~/dotfiles/mac_aliases
+source ~/dotfiles/mac-aliases
