@@ -16,5 +16,8 @@ set modelines=1 " so i can use modeline in this file
 set showcmd     " show command in bottom bar
 set wildmenu    " for autocomleting menu commands 
 syntax enable   " turn on syntax
-
+" }}}
+" Plugins {{{
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+" }}}
 " vim:foldmethod=marker:foldlevel=0
