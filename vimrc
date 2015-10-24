@@ -18,6 +18,6 @@ set wildmenu    " for autocomleting menu commands
 syntax enable   " turn on syntax
 " }}}
 " Plugins {{{
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+execute pathogen#infect()
 " }}}
 " vim:foldmethod=marker:foldlevel=0
