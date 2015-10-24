@@ -23,3 +23,5 @@ for file in $files; do
     mv ~/.$file ~/dotfiles_old/$today/
     ln -s $dir/$file ~/.$file
 done
+
+ln -s $dir/vim ~/.vim
