@@ -9,6 +9,8 @@ set hlsearch " highlight search matches
 " Folding {{{
 set foldenable " folding turned on
 set foldlevelstart=10 " unfold most things by default
+nnoremap <space> za
+nnoremap <NUL> zR
 " }}}
 " Misc {{{
 set number      " line numbers on
