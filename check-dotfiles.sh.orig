@@ -1,0 +1,25 @@
+#!/bin/bash
+
+<<<<<<< HEAD
+echo -n "Checking dotfiles..."
+FETCH=$(git -C ~/dotfiles fetch)
+LOCAL=$(git -C ~/dotfiles rev-parse @)
+REMOTE=$(git -C ~/dotfiles  rev-parse @{u})
+BASE=$(git -C ~/dotfiles merge-base @ @{u})
+=======
+
+if [ -f ~/.check-dotfiles-flag ]; then
+    LOCAL=$(git -C ~/dotfiles rev-parse @)
+    REMOTE=$(git -C ~/dotfiles  rev-parse @{u})
+    BASE=$(git -C ~/dotfiles merge-base @ @{u})
+>>>>>>> 2e3770563b65714bd22b11a07c9439299fd76edd
+
+if [ $LOCAL = $REMOTE ]; then
+    :
+elif [ $LOCAL = $BASE ]; then
+    echo "Dotfiles out of date"
+elif [ $REMOTE = $BASE ]; then
+    echo "Need to push dotfiles"
+else
+    echo "Dotfiles diverged"
+fi
