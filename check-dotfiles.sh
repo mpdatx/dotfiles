@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 if [ -f ~/.check-dotfiles-flag ]; then
     LOCAL=$(git -C ~/dotfiles rev-parse @)
     REMOTE=$(git -C ~/dotfiles  rev-parse @{u})
