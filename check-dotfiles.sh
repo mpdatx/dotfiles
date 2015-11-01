@@ -7,7 +7,7 @@ REMOTE=$(git -C ~/dotfiles  rev-parse @{u})
 BASE=$(git -C ~/dotfiles merge-base @ @{u})
 
 if [ $LOCAL = $REMOTE ]; then
-    :
+    echo "up to date."
 elif [ $LOCAL = $BASE ]; then
     echo "Dotfiles out of date"
 elif [ $REMOTE = $BASE ]; then
