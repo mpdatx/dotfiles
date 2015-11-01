@@ -8,6 +8,9 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+
+touch ~/.check-dotfiles-flag
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -22,6 +25,19 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 export PYTHONSTARTUP=$HOME/.pythonrc.py
+
+
+alias pull-dots='git -C ~/dotfiles pull origin master'
+alias push-dots='git -C ~/dotfiles commit -a -m "autocommit"; git -C ~/dotfiles push origin master'
+alias dots='pull-dots; push-dots; source ~/.profile'
+alias vim-bundle="docker run -ti --rm -v $(pwd):/home/developer/workspace jare/vim-bundle"
+alias lazygit="git add .; git commit -a -m 'lazygit'; git push;"
+
+source ~/dotfiles/git_prompt
+source ~/dotfiles/mac-aliases
+
+export NVM_DIR="/Users/mdaniels/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 if [[ "$TERM" != "screen" ]] ; then
     # Attempt to discover a detached session and attach 
@@ -45,12 +61,3 @@ else
         $MOTD
     fi
 fi
-
-alias pull-dots='git -C ~/dotfiles pull origin master'
-alias push-dots='git -C ~/dotfiles commit -a -m "autocommit"; git -C ~/dotfiles push origin master'
-alias dots='pull-dots; push-dots; source ~/.profile'
-alias vim-bundle="docker run -ti --rm -v $(pwd):/home/developer/workspace jare/vim-bundle"
-alias lazygit="git add .; git commit -a -m 'lazygit'; git push;"
-
-source ~/dotfiles/git_prompt
-source ~/dotfiles/mac-aliases

@@ -51,6 +51,7 @@ function prompt_func() {
     # prompt="${TITLEBAR}$BLUE[$RED\w$GREEN$(__git_ps1)$YELLOW$(git_dirty_flag)$BLUE]$COLOR_NONE "
     prompt="\w${GREEN}$(parse_git_branch)${COLOR_NONE}"
     PS1="${prompt} $ "
+    if [ -f ~/.check-dotfiles-flag ]; then ~/dotfiles/check-dotfiles.sh ; fi
 }
 
 PROMPT_COMMAND=prompt_func
