@@ -32,7 +32,8 @@ alias push-dots='git -C ~/dotfiles commit -a -m "autocommit"; git -C ~/dotfiles 
 alias dots='pull-dots; push-dots; source ~/.profile'
 alias vim-bundle="docker run -ti --rm -v $(pwd):/home/developer/workspace jare/vim-bundle"
 alias lazygit="git add .; git commit -a -m 'lazygit'; git push;"
-alias jekyll-publish="docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll   -it -p 127.0.0.1:4000:4000 jekyll/jekyll jekyll b"
+alias jekyll-publish='cd /home/mpd/blog && docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll   -it -p 127.0.0.1:4000:4000 jekyll/jekyll jekyll b && cd -'
+alias jekyll-publish-drafts='cd /home/mpd/blog && docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll   -it -p 127.0.0.1:4000:4000 jekyll/jekyll jekyll b --draft && cd -'
 
 source ~/dotfiles/git_prompt
 source ~/dotfiles/mac-aliases
