@@ -23,3 +23,7 @@ syntax enable   " turn on syntax
 execute pathogen#infect()
 " }}}
 " vim:foldmethod=marker:foldlevel=0
+set background=dark
+colorscheme solarized
+set t_Co=256
+let g:solarized_termcolors=256
