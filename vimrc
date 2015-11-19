@@ -22,8 +22,10 @@ syntax enable   " turn on syntax
 " Plugins {{{
 execute pathogen#infect()
 " }}}
-" vim:foldmethod=marker:foldlevel=0
-set background=dark
+" Color Scheme {{{
 colorscheme solarized
 set t_Co=256
 let g:solarized_termcolors=256
+set background=light
+" }}}
+" vim:foldmethod=marker:foldlevel=0
