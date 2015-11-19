@@ -2,6 +2,7 @@
     {{ with $address := first $value.Addresses }}
 server {
     listen {{ $address.Port }};
+     client_max_body_size 128M;
     location / {
         proxy_pass  http://{{ $address.IP }}:{{ $address.Port }};
         include /etc/nginx/proxy_params;
