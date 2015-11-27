@@ -37,6 +37,7 @@ alias jekyll-publish-drafts='cd /home/mpd/blog && docker run --rm --label=jekyll
 
 source ~/dotfiles/git_prompt
 source ~/dotfiles/mac-aliases
+source ~/dotfiles/complete_hosts.sh
 
 export NVM_DIR="/Users/mdaniels/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
