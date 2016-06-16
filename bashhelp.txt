@@ -1,0 +1,8 @@
+M-b  : back one word                C-a: beginning of line
+M-f  : forward one word             C-e: end of line
+M-del: Delete word before cursor    C-u: Delete to beginning of line
+M-d  : Delete word after cursor     C-k: Delete to end of line
+
+C-xx: toggle between start of line/current position
+More at: http://ss64.com/bash/syntax-keyboard.html
+
