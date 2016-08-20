@@ -13,6 +13,13 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+# for timing app
+PROMPT_TITLE='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
+export PROMPT_COMMAND="${PROMPT_COMMAND} ${PROMPT_TITLE}; "
+
+# show bash help via ctrl-h
+bind '"\C-h"':"\"cat ~/dotfiles/bashhelp.txt\C-m\""
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
