@@ -17,3 +17,6 @@ _complete_hosts () {
 }
 complete -F _complete_hosts ssh
 complete -F _complete_hosts host
+complete -F _complete_hosts telnet
+complete -F _complete_hosts ping
+
