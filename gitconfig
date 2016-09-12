@@ -5,3 +5,5 @@
 	name = Matthew Daniels
 [push]
     default = simple
+[http]
+	sslVerify = false

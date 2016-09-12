@@ -10,6 +10,7 @@
 
 
 touch ~/.check-dotfiles-flag
+# export JAVA_HOME=$(/usr/libexec/java_home)
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
@@ -46,8 +47,8 @@ source ~/dotfiles/git_prompt
 source ~/dotfiles/mac-aliases
 source ~/dotfiles/complete_hosts.sh
 
-export NVM_DIR="/Users/mdaniels/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR=~/.nvm
+. $(brew --prefix nvm)/nvm.sh
 
 if [[ "$TERM" != "screen" ]] ; then
     # Attempt to discover a detached session and attach 
@@ -55,7 +56,7 @@ if [[ "$TERM" != "screen" ]] ; then
 
     WHOAMI=$(whoami)
     if tmux has-session -t $WHOAMI 2>/dev/null; then
-        tmux -2 attach-session -t $WHOAMI
+       tmux -2 attach-session -t $WHOAMI
     else
         tmux -2 new-session -s $WHOAMI
     fi
@@ -70,4 +71,9 @@ else
     if [ -f $MOTD ]; then
         $MOTD
     fi
-fi
+ fi
+
+
+
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
