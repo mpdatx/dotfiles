@@ -1,3 +1,0 @@
-alias loadphp="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php55.plist"
-alias unloadphp="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php55.plist"
-alias restartphp="unloadphp; loadphp"
