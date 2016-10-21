@@ -1,6 +1,8 @@
 #!/bin/bash
 
 function j() { 
+    # BLOG_HOME=/home/mpd/blog
+    BLOG_HOME=/Users/mdaniels/Dropbox/blog
     if [ $1"" == "publish" ]; then 
         J_CMD="b"
     elif [ $1"" == "watch" ]; then 
@@ -17,8 +19,8 @@ function j() {
         echo "j [publish|watch] [live|draft]"
         return
     fi 
-        cd /home/mpd/blog && \
-        docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll -it jekyll/jekyll \
+        cd $BLOG_HOME && 
+        docker run --volume=$(pwd):/srv/jekyll -it localjekyll \
         jekyll $J_CMD $J_OPT && \
         cd -
 }
